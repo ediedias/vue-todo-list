@@ -23,8 +23,8 @@ const toggleTask = (index) => {
 </script>
 
 <template>
-     <div class="mb-4 w-96">
-          <input v-model="newTask" @keyup.enter="addTask" class="border p-2 w-full" type="text" placeholder="Add a new task" />
+     <div class="mb-4 w-full">
+          <input v-model="newTask" @keyup.enter="addTask" class="border p-2 w-full box-border" type="text" placeholder="Add a new task" />
           <ul>
                <TodoItem v-for="(task, index) in tasks" :key="index" :task="task" @remove="removeTask(index)" @toggle="toggleTask(index)" />
           </ul>
